@@ -4,7 +4,7 @@ format long
 rng(1)
 
 % Set the matrix size
-m = 2;
+m = 3;
 
 % Generate a random matrix
 A = rand( m, m );
@@ -147,6 +147,10 @@ disp( 'Difference between A and U * Sigma * transpose(V) ')
 disp( norm( A - U * Sigma * V', 'fro' ) );
 
 A - U * Sigma * V'
+
+A
+
+U * Sigma * V'
 
 U
 Sigma
