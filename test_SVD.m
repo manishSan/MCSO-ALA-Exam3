@@ -36,8 +36,6 @@ Bi = BiFromB( B );
 
 disp('Norm of difference between singular values of A and singular values of Bi')
 disp( norm( svd( A ) - svd( Bi ) ) );
-svd(A)
-svd(Bi)
 if norm( svd( A ) - svd( Bi ) ) > 1.0e-14 
     disp( 'Something is wrong with your reduction to bidiagonal form' ); 
     disp( 'left colum:   singular values of A.' );
@@ -69,8 +67,6 @@ V_A( 2:m, 2:m ) = FormQ(Bt( 2:m, 1:m-1), r(1: m-1));
 
 % Uncomment the below to check if you got it right:
 disp( 'Difference between U_A * Bi * V_A and A:' );
-A
-U_A * Bi * V_A'
 norm( U_A * Bi * V_A' - A )
 if ( norm( U_A * Bi * V_A' - A ) > 1.0e-10 )
     disp( 'Something is wrong with your U_A and V_A' ); 
@@ -155,5 +151,9 @@ U * Sigma * V'
 U
 Sigma
 V
+
+uut = U*U'
+
+vvt = V*V'
 
 [U_f,S_f,V_f] = svd(A)
