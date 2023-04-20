@@ -4,7 +4,7 @@ format long
 rng(1)
 
 % Set the matrix size
-m = 5;
+m = 2;
 
 % Generate a random matrix
 A = rand( m, m );
