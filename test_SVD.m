@@ -4,7 +4,7 @@ format long
 rng(1)
 
 % Set the matrix size
-m = 3;
+m = 5;
 
 % Generate a random matrix
 A = rand( m, m );
@@ -144,16 +144,16 @@ disp( norm( A - U * Sigma * V', 'fro' ) );
 
 A - U * Sigma * V'
 
-A
-
-U * Sigma * V'
-
+% A
+% 
+% U * Sigma * V'
+% 
 U
 Sigma
 V
 
-uut = U*U'
+uut_test = U*U'
 
-vvt = V*V'
+vvt_test = V*V'
 
 [U_f,S_f,V_f] = svd(A)
