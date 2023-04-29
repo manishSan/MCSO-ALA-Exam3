@@ -4,7 +4,7 @@ format long
 rng(1)
 
 % Set the matrix size
-m = 2;
+m = 5;
 
 % Generate a random matrix
 A = rand( m, m );
@@ -142,18 +142,18 @@ end
 disp( 'Difference between A and U * Sigma * transpose(V) ')
 disp( norm( A - U * Sigma * V', 'fro' ) );
 
-A - U * Sigma * V'
-
+% A - (U * Sigma * V')
+% 
 % A
 % 
-% U * Sigma * V'
+% gen_A = U * Sigma * V'
 % 
-U
-Sigma
-V
-
-uut_test = U*U'
-
-vvt_test = V*V'
-
-[U_f,S_f,V_f] = svd(A)
+% U
+% Sigma
+% V
+% 
+% uut_test = U*U'
+% 
+% vvt_test = V*V'
+% 
+% [U_f,S_f,V_f] = svd(A)

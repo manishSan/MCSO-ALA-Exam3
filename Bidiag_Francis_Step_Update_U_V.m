@@ -18,7 +18,7 @@ function [U, B, V] = Bidiag_Francis_Step_Update_U_V(U, B, V)
     B( 1:2, 1:2 ) = B( 1:2, 1:2 ) * G;
     % (G' * V') = (V * G)'
 
-    V(:, 1:2) = V(:, 1:2) * G
+    V(:, 1:2) = V(:, 1:2) * G;
     
     % Chase the bulge until it is in the last row of the matrix
     for i=1:m-2
